@@ -1,15 +1,16 @@
 <html>
 <head>
-<title>der Test</title>
+<title>Word count application</title>
 </head>
 <body>
 <h1>Word Count</h1>
-
-<form action="{% url 'count' %}">
+<p>Enter text to the form below and click [Count!]</p>
+<form method="POST" action="{% url 'count' %}">{% csrf_token %}
 	<textarea cols='40' rows='10' name='fulltext'></textarea>
 	<br/>
 	<input type='submit' value='Count!' />
 </form>
+<hr/>
 <a href='{% url "about" %}'>About</a>
 </body>
 <html>
