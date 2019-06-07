@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>der Test</title>
+</head>
+<body>
+<h1>Count: there are {{ count }} word(s)</h1>
+
+<h2>Original text:</h2>
+{{ fulltext }}
+
+<h3>Word counts:</h3>
+{% for word, counttotal in wordcount %}
+{{ word }}: {{ counttotal }}<br/>
+{% endfor %}
+
+<a href='{% url "home" %}'>Return to Homepage</a>
+</body>
+<html>
